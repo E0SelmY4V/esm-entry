@@ -1,6 +1,6 @@
 {
 	"name": "esm-entry",
-	"version": "0.9.0",
+	"version": "1.0.0",
 	"description": "Providing some polyfill to make you build the ESM entry point for your CJS project easily",
 	"main": "index.js",
 	"scripts": {},
