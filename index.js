@@ -1,3 +1,10 @@
+/**
+ * ESM Entry
+ * @license MIT
+ * @link https://github.com/E0SelmY4V/esm-entry
+ */
+"use strict";
+
 const { fileURLToPath } = require('url');
 const { dirname } = require('path');
 

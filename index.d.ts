@@ -1,6 +1,6 @@
 /**
  * ESM Entry
- * @version 1.0.1
+ * @version 1.0.3
  * @license MIT
  * @link https://github.com/E0SelmY4V/esm-entry
  */
