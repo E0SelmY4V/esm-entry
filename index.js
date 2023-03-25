@@ -1,8 +1,8 @@
 const { fileURLToPath } = require('url');
 const { dirname } = require('path');
 
-this[['def', 'ult'].join('a')] = this;
-this.getFilename = (n) => fileURLToPath(n);
-this.getDirname = (n) => dirname(fileURLToPath(n));
-this.fnFilename = (p) => Object.assign(n => p(this.getFilename(n)), p);
-this.fnDirname = (p) => Object.assign(n => p(this.getDirname(n)), p);
+exports[['def', 'ult'].join('a')] = exports;
+exports.getFilename = (n) => fileURLToPath(n);
+exports.getDirname = (n) => dirname(fileURLToPath(n));
+exports.fnFilename = (p) => Object.assign(n => p(exports.getFilename(n)), p);
+exports.fnDirname = (p) => Object.assign(n => p(exports.getDirname(n)), p);
