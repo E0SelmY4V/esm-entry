@@ -2,7 +2,11 @@ const { fileURLToPath } = require('url');
 const { dirname } = require('path');
 
 exports[['def', 'ult'].join('a')] = exports;
-exports.getFilename = (n) => fileURLToPath(n);
-exports.getDirname = (n) => dirname(fileURLToPath(n));
-exports.fnFilename = (p) => Object.assign(n => p(exports.getFilename(n)), p);
-exports.fnDirname = (p) => Object.assign(n => p(exports.getDirname(n)), p);
+const safely = exports.safely = (fn, arg) => {
+	try { return fn(arg); }
+	catch (err) { return arg; }
+};
+const getFilename = exports.getFilename = (n) => safely(fileURLToPath, n);
+const getDirname = exports.getDirname = (n) => dirname(getFilename(n));
+const fnFilename = exports.fnFilename = (p) => Object.assign(n => p(getFilename(n)), p);
+const fnDirname = exports.fnDirname = (p) => Object.assign(n => p(getDirname(n)), p);
